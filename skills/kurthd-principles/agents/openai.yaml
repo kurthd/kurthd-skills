@@ -1,0 +1,7 @@
+interface:
+  display_name: "Kurthd Principles"
+  short_description: "Apply Kurth engineering defaults"
+  default_prompt: "Use $kurthd-principles while working on this codebase."
+
+policy:
+  allow_implicit_invocation: true
