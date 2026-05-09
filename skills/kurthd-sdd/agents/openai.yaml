@@ -1,0 +1,7 @@
+interface:
+  display_name: "Kurthd SDD"
+  short_description: "Apply lightweight spec-driven repo docs"
+  default_prompt: "Use $kurthd-sdd to initialize lightweight spec-driven development docs for this repo."
+
+policy:
+  allow_implicit_invocation: true
