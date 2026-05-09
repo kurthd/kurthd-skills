@@ -14,3 +14,15 @@ avoid collisions with shared or third-party skills.
 ## Workflow Docs
 
 - [Spec-driven development conventions](docs/workflows/spec-driven-development.md)
+
+## Local Install
+
+Install or update all skills from this repo for local use:
+
+```sh
+scripts/install-local-skills.sh
+```
+
+By default this installs into `~/.agents/skills`, matching the local custom skill
+location used on this machine. Use `--dest <path>` to install somewhere else, or
+`--dry-run` to preview the work.
