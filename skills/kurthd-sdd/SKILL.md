@@ -62,6 +62,48 @@ When behavior changes:
 - Keep docs one layer above code; do not repeat implementation details line by
   line.
 
+## Aligning Existing Repo Docs
+
+When asked to bring an existing repo's docs in line with these conventions,
+treat the work as editorial and architectural alignment, not mechanical
+template application.
+
+Prefer a two-pass workflow unless the repo is very small or the requested change
+is obviously safe.
+
+Pass 1: inventory and recommend.
+
+1. Find existing docs: `AGENTS.md`, `README.md`, `docs/`, specs, requirements,
+   ADRs, runbooks, architecture notes, and planning docs.
+2. Classify each document:
+   - agent orientation
+   - workflow or principles
+   - architecture, tech stack, or patterns
+   - functional spec
+   - operational runbook
+   - project management, status, or history
+   - stale, duplicate, or unclear
+3. Identify what to keep, rename, move, merge, split, or leave alone.
+4. Propose the smallest target structure that improves navigation and future
+   maintenance.
+5. Ask before deleting, archiving, or heavily rewriting substantial docs.
+
+Pass 2: apply the agreed changes.
+
+- Preserve useful local context and repo-specific language.
+- Create or update `AGENTS.md` as the routing layer.
+- Move durable behavioral intent into specs.
+- Move durable structural guidance into architecture, tech stack, or pattern
+  docs.
+- Convert useful decisions from planning docs into current guidance when still
+  true.
+- Remove or relocate stale status, backlog, and planning history only when the
+  user has approved that cleanup.
+- Prefer compact docs with omitted sections over filled-out templates.
+
+If a repo already has a good documentation system, align with it instead of
+renaming everything to match these examples.
+
 ## Initializing A Repo
 
 When asked to initialize a repo with these conventions, inspect the repo first
