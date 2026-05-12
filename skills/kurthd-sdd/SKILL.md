@@ -92,6 +92,9 @@ Pass 2: apply the agreed changes.
 
 - Preserve useful local context and repo-specific language.
 - Create or update `AGENTS.md` as the routing layer.
+- Create or update local spec guidance, usually `docs/specs/README.md` or the
+  equivalent repo-local docs entry, so future specs know the expected compact
+  shape.
 - Move durable behavioral intent into specs.
 - Move durable structural guidance into architecture, tech stack, or pattern
   docs.
@@ -102,7 +105,8 @@ Pass 2: apply the agreed changes.
 - Prefer compact docs with omitted sections over filled-out templates.
 
 If a repo already has a good documentation system, align with it instead of
-renaming everything to match these examples.
+renaming everything to match these examples. Even then, make sure the repo has
+some discoverable local guidance for how specs should be structured.
 
 ## Initializing A Repo
 
@@ -132,6 +136,32 @@ docs/
 Only add `docs/tech-stack.md`, `docs/patterns.md`, or `docs/principles.md` when
 they contain real repo-specific guidance. A generated empty placeholder is worse
 than no file.
+
+Do not copy the full canonical convention document into target repos by default.
+Instead, create concise repo-local workflow and spec guidance that records the
+local adoption of the convention and any repo-specific deviations.
+
+At minimum, the repo should document the compact spec shape somewhere agents can
+find it, usually in `docs/specs/README.md`:
+
+```md
+# Specs
+
+Specs describe durable behavior, domain rules, and important constraints.
+
+Use this compact shape by default:
+
+## Intent
+
+## Behavior
+
+## Rules
+
+## Open Questions
+
+Add sections like Interfaces, Edge Cases, Observability, or Non-Goals only when
+useful.
+```
 
 ## Compact Schemas
 

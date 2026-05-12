@@ -166,6 +166,18 @@ Compact default:
 ## Open Questions
 ```
 
+Section intent:
+
+- `Intent`: why this feature or domain exists. Describe the user or system
+  purpose in plain language, not implementation.
+- `Behavior`: what the system does or should do. Capture observable flows,
+  states, outputs, side effects, and important failure behavior.
+- `Rules`: what must remain true across behaviors. Capture constraints,
+  invariants, validation, permissions, lifecycle, idempotency, and data-handling
+  expectations.
+- `Open Questions`: unresolved questions that affect behavior, implementation,
+  scope, or validation.
+
 Use the expanded form only when the feature or domain needs it:
 
 ```md
