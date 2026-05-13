@@ -64,6 +64,31 @@ When deciding whether to add complexity, ask:
   do not force a pattern where a plain function or small module is clearer.
 - Keep the straightforward path easy to follow.
 
+## Cohesion And Coupling
+
+Aim for components, classes, functions, and modules that have a clear reason to
+change. Watch for pieces that mix unrelated concerns, coordinate too many
+responsibilities, or require broad edits for narrow behavior changes.
+
+Coupling is not inherently bad. A working system needs connections between
+parts. The risk to manage is overly tight coupling: places where independent
+concepts, workflows, or failure modes become difficult to change, test, or
+reason about separately.
+
+Default patterns:
+
+- Keep closely related behavior together when it improves readability and
+  local reasoning.
+- Separate concerns that change for different reasons, especially business
+  rules, IO, persistence, external integrations, and orchestration.
+- Prefer boundaries that let common behavior changes happen through targeted
+  edits instead of sweeping system changes.
+- Keep significant deterministic business logic testable without requiring
+  network calls, databases, file systems, clocks, or unrelated services.
+- Isolate IO and external-system details at the edges when practical.
+- Avoid splitting code so finely that the flow becomes harder to understand
+  than the problem being solved.
+
 ## Code Style
 
 - Write code for reviewability first. Clear is better than compact.
